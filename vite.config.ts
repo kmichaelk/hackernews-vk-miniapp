@@ -1,3 +1,5 @@
+import { fileURLToPath, URL } from 'node:url';
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import legacy from '@vitejs/plugin-legacy';
@@ -31,6 +33,12 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11'],
     }),
   ],
+
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
 
   build: {
     outDir: 'build',
