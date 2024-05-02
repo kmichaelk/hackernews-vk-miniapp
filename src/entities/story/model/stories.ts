@@ -29,4 +29,5 @@ export const api = createApi({
   }),
 });
 
-export const { useFetchStoryQuery, useLazyFetchStoryQuery, useFetchStoriesListQuery, useLazyFetchStoriesListQuery } = api;
+export const { useFetchStoryQuery, useLazyFetchStoryQuery, useFetchStoriesListQuery, useLazyFetchStoriesListQuery } =
+  api;

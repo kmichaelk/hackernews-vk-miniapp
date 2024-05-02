@@ -22,14 +22,14 @@ export const StoryPage: FC<StoryPageProps> = ({ id }) => {
 
   const storyId = parseInt(storyIdStr!);
 
-  const [trigger, { data, error, isFetching }] = storyModel.useLazyFetchStoryQuery()
+  const [trigger, { data, error, isFetching }] = storyModel.useLazyFetchStoryQuery();
 
-  const [updateTime, setUpdateTime] = useState<number>(Date.now())
+  const [updateTime, setUpdateTime] = useState<number>(Date.now());
   useEffect(() => {
-    trigger(storyId)
-  }, [storyId, trigger])
+    trigger(storyId);
+  }, [storyId, trigger]);
 
-  const invalidate = () => setUpdateTime(Date.now())
+  const invalidate = () => setUpdateTime(Date.now());
 
   return (
     <Panel id={id}>
@@ -59,7 +59,10 @@ export const StoryPage: FC<StoryPageProps> = ({ id }) => {
           </Group>
           {data.kids?.map((commentId, idx) => (
             <Group key={idx}>
-              <CommentNode commentId={commentId} updateTime={updateTime} />
+              <CommentNode
+                commentId={commentId}
+                updateTime={updateTime}
+              />
             </Group>
           )) ?? (
             <Group>

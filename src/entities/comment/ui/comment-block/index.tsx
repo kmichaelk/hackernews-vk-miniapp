@@ -14,7 +14,12 @@ export const CommentBlock: FC<CommentBlockProps> = ({ data, isRefreshing }) => {
     <Div>
       <Footnote className={styles.summary}>
         {data.by ?? 'Удаленный комментарий'} • {formatDistanceToNow(new Date(data.time * 1000))} назад
-        {isRefreshing && <Spinner size="small" className={styles.spinner} />}
+        {isRefreshing && (
+          <Spinner
+            size="small"
+            className={styles.spinner}
+          />
+        )}
       </Footnote>
       <Spacing size={8} />
       <Paragraph>

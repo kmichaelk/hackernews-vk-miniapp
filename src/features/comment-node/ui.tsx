@@ -14,11 +14,11 @@ export const CommentNode: FC<CommentNodeProps> = ({ commentId, updateTime }) => 
   const [trigger, { data, error, isFetching }] = commentModel.useLazyFetchCommentQuery();
 
   useEffect(() => {
-    trigger(commentId)
-  }, [commentId, trigger, updateTime])
+    trigger(commentId);
+  }, [commentId, trigger, updateTime]);
 
   if (isFetching && !data) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   if (!data) {
@@ -27,7 +27,10 @@ export const CommentNode: FC<CommentNodeProps> = ({ commentId, updateTime }) => 
 
   return (
     <div>
-      <CommentBlock data={data} isRefreshing={isFetching} />
+      <CommentBlock
+        data={data}
+        isRefreshing={isFetching}
+      />
       {!collapsed && (
         <div className={styles['tree-root']}>
           {data.kids?.map((kidId, idx) => (
