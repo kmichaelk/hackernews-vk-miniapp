@@ -1,0 +1,20 @@
+.root {
+  min-width: 28px;
+  padding: 4px 8px;
+}
+
+.position {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.rating-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  gap: 2px;
+
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,15 @@
+.summary {
+  color: var(--vkui--color_text_secondary);
+}
+
+.spinner {
+  display: inline-block;
+
+  & :global(.vkuiIcon) {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  inline-size: auto;
+  margin: auto 4px;
+}
