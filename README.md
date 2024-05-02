@@ -7,6 +7,7 @@
 > [Демоверсия](https://vk.com/app51915527) (ID `51915527`)
 
 - Разработано с использованием архитектурной методологии Feature Sliced Design
+- Для загрузки данных используется [официальное API HackerNews](https://github.com/HackerNews/API)
 
 
 ![](/docs/screenshot_1.jpg)
